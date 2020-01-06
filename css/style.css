@@ -43,7 +43,6 @@
 .menu_wrap .toggler:checked ~ .menu {
   -webkit-transform: scale(1);
           transform: scale(1);
-  visibility: visible;
   left: 0;
   top: 35px;
 }
@@ -51,7 +50,7 @@
 @media (min-width: 600px) {
   .menu_wrap .toggler:checked ~ .menu {
     top: 8vh;
-    left: calc(calc(100vw - 40vw) / 2);
+    left: calc(calc(100vw - 50vw) / 2);
   }
 }
 
@@ -129,18 +128,17 @@
   -webkit-box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.45);
           box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.45);
   top: 0;
-  visibility: hidden;
   -webkit-transform: scale(0);
           transform: scale(0);
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
-  left: -size(small, menu-width);
+  left: -60vw;
 }
 
 @media (min-width: 600px) {
   .menu {
-    left: -size(medium, menu-width);
-    width: 40vw;
+    left: -50vw;
+    width: 50vw;
     font-size: 1.75rem;
     border-radius: 4px;
   }
@@ -218,6 +216,10 @@
   color: #182733;
 }
 
+.menu ul li a:active {
+  color: gold;
+}
+
 .menu .submenu {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -266,6 +268,10 @@
 
 .menu .submenu li a:hover {
   color: #85a9c5;
+}
+
+.menu .submenu li a:active {
+  color: gold;
 }
 
 * {
