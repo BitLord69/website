@@ -1,0 +1,5 @@
+För att positionera de olika delarna använde jag CSS Grid. Det jag gillar med CSS Grid är att man ser hur layoten ser ut om man använder grid-template-area. I detta fallet gjorde jag tre areor: sidhuvud (hd), innehåll (cn) och sidfot (ft).
+
+För att sidfoten alltid ska visas längst ner använde jag position:sticky och satte minimumhöjd på body till hela skärmhöjden (min-height:100vh) så att sidfoten kommer längst ner på skärmen ifall innehållet i cn inte fyller upp hela sidan.
+
+Till en början använde jag en span för att skriva texten i footer, men tack vare att det är ett inline-element är man tvungen att sätta bredden på elementet. Jag valde därför istället att använda en p-tag, som tack vare att det är ett blockelement automagiskt tar upp hela sidlängden. Dock var jag då tvungen att nollställa marginalerna så att texten inte tar upp mer vertikal plats än önskat; lite CSS-kod hur man än gör med andra ord.

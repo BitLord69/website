@@ -1,0 +1,236 @@
+.menu_wrap {
+  top:0;
+  left:0;
+  z-index: 1;
+  position: fixed;
+
+  .toggler{
+    top: 0;
+    left: 0;
+    z-index: 2;
+    opacity: 0;
+    cursor: pointer;
+    position: absolute;
+
+    width: size(small, hamburger);
+    height: size(small, hamburger);
+
+    @include breakpoint(medium)
+    {
+      width: size(medium, hamburger);
+      height: size(medium, hamburger);
+    } // @include...
+  } // .toggler
+
+  .toggler:checked + .hamburger > div{
+    transform: rotate(135deg);
+  }
+
+  .toggler:checked + .hamburger > div:before,
+  .toggler:checked + .hamburger > div:after{
+    top: 0;
+    transform: rotate(90deg);
+  }
+
+  .toggler:checked:hover + .hamburger > div{
+    transform: rotate(225deg);
+  }
+
+  .toggler:checked ~ .menu {
+    transform: scale(1);
+    visibility: visible;
+
+    left: 0;
+    top: size(small, menu-top);
+
+    @include breakpoint(medium)
+    {
+      top: size(medium, menu-top);
+      left: calc(calc(100vw - #{size(medium, menu-width)}) / 2);
+    } // @include...
+  } // .toggler:checked
+
+  .toggler:checked ~ .hamburger {
+    background: get-color(hamburger-opaque);
+  }
+
+  .hamburger {
+    top: 0;
+    left: 0;    
+    z-index: 1;
+    display: flex;
+    position: absolute;
+    visibility: visible;
+    align-items: center;
+    justify-content: center;
+
+    width: size(small, hamburger);
+    height: size(small, hamburger);
+    padding: size(small, hamburger-padding);
+
+    @include breakpoint(medium)
+    {
+      width: size(medium, hamburger);
+      height: size(medium, hamburger);
+      padding: size(medium, hamburger-padding);
+    } // @include...
+
+    div {
+      width: 100%;
+      height: 2px;
+      display: flex;
+      position: relative;
+      align-items: center;
+      justify-content: center;
+      background-color:get-color(body);
+      transition: all $menu-speed ease;
+    }
+    
+      div:before, div:after {
+      content:'';
+      top: -8px;
+      z-index: 1;
+      width: 100%;
+      height: 2px;
+      position: absolute;
+      background: inherit;
+    }
+    
+    div:after {
+      top: 8px;
+    } // div:after
+  } // .hamburger
+} // .menu_wrap
+
+.menu {
+  // display: flex;
+  position: absolute;
+  color: get-color(primary);
+  
+  width: size(small, menu-width);
+  font-size: size(small, main-font);
+  border-radius: size(small, border-radius);
+  
+  background: get-color(primary);
+  box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.45);
+ 
+    // Properties for animating when showing the menu
+  top: 0;
+  visibility: hidden;
+  transform: scale(0);
+  transition: all $menu-speed ease;
+
+  left: -size(small, menu-width);
+
+  @include breakpoint(medium)
+  {
+    left: -size(medium, menu-width);
+    width: size(medium, menu-width);
+    font-size: size(medium, main-font);
+    border-radius: size(medium, border-radius);
+  }
+
+  ul {
+    display: flex;
+    margin: 5px 0;
+    flex-direction: column;
+    justify-content: start;
+    
+    @include breakpoint(medium)
+    {
+      margin: 15px 0;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    list-style: none;
+    
+    li {
+      margin: 0.5rem 0.2rem 0 0.2rem;
+      
+      text-align: left;
+      @include breakpoint(medium)
+      {
+        text-align: center;
+      }
+      
+      &:hover ul {
+        display: flex;
+      } // &:hover ul
+
+      a {
+        text-decoration: none;
+        padding: 0.5rem 1.2rem;
+        line-height: size(small, menu-line-height);
+
+        @include breakpoint(medium)
+        {
+          line-height: size(medium, menu-line-height);
+        }
+
+        &:hover {
+          border-radius: size(small, border-radius);
+          background: darken(get-color(primary), 5%);
+
+          @include breakpoint(medium)
+          {
+            border-radius: size(medium, border-radius);
+          }
+        } // &:hover
+
+        &:link,
+        &:visited {
+          color: get-color(menu);
+        } // &:link...
+      } // a
+    } // li
+
+    // .menu>ul>li:first-child a{
+    //   width:270px;
+    // }
+  } // ul
+
+  .submenu {
+    flex-direction: column;
+    
+    list-style: none;
+    margin: 0 0.2rem;
+    font-size: size(small, sub-font);
+    line-height: size(small, submenu-line-height);
+    
+    display: flex;
+    @include breakpoint(medium)
+    {
+      display: none; // display gets set to 'flex' in the main li:hover
+      font-size: size(medium, sub-font);
+      line-height: size(medium, submenu-line-height);
+    }
+
+    li {
+      margin: 0.5rem 0.5rem;
+      
+      text-align: left;
+      @include breakpoint(medium)
+      {
+        margin: 0.5rem 0.2rem;
+        text-align: center;
+      }
+
+      a {
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+
+        line-height: size(small, submenu-line-height);
+
+        @include breakpoint(medium)
+        {
+          line-height: size(medium, submenu-line-height);
+        }
+
+        &:hover {
+          color: lighten(get-color(menu), 50%);
+        } // &:hover
+      } // a
+    } // li
+  } // .submenu
+} // .menu

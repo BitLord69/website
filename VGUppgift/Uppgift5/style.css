@@ -1,0 +1,36 @@
+body {
+  color: teal;
+  background: whitesmoke;
+  box-sizing: border-box;
+
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 75px auto 25px;
+  grid-template-areas:
+    "hd"
+    "cn"
+    "ft";
+}
+
+.hd {
+  grid-area: hd;
+  text-align: center;
+  background: lightcoral;
+}
+
+.cn {
+  grid-area: cn;
+}
+
+.ft {
+  grid-area: ft;
+  position: sticky;
+  text-align: center;
+  background: lightskyblue;
+}
+
+.ft > p {
+  margin: 0;
+}

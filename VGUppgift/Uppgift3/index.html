@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- Bootstrap CSS and JS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script
+      src="http://code.jQuery.com/jQuery-latest.js"
+      type="text/javascript"
+    ></script>
+
+    <script src="main.js" defer></script>
+
+    <title>Hotel Blue</title>
+  </head>
+  <body>
+    <header>
+      <section class="hdr">
+        <h1>Stay at the Hotel Blue!</h1>
+      </section>
+    </header>
+    <main>
+      <section class="col-10 offset-1 col-md-8 offset-md-2">
+        <form>
+          <section class="form-row">
+            <section class="form-group col-12 col-md-6">
+              <label for="check-in">Check in</label>
+              <input
+                type="date"
+                id="check-in"
+                name="check-in"
+                class="form-control"
+                required
+              />
+            </section>
+            <section class="form-group col-12 col-md-6">
+              <label for="check-out">Check out</label>
+              <input
+                type="date"
+                id="check-out"
+                name="check-out"
+                class="form-control"
+                required
+              />
+            </section>
+          </section>
+          <section class="form-row">
+            <section class="form-group col-6">
+              <label for="num-adults">Adults</label>
+              <input
+                type="number"
+                min="0"
+                value="1"
+                name="num-adults"
+                class="form-control"
+              />
+            </section>
+            <section class="form-group col-6">
+              <label for="num-children">Children</label>
+              <input
+                type="number"
+                min="0"
+                value="0"
+                name="num-children"
+                class="form-control"
+              />
+            </section>
+          </section>
+          <section class="form-row">
+            <section class="col-12 justify-content-stretch">
+              <button class="btn btn-primary">Search for rooms</button>
+            </section>
+          </section>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

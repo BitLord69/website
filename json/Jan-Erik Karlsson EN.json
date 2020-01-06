@@ -1,0 +1,348 @@
+{
+    "basics": {
+        "name": "Jan-Erik Karlsson",
+        "label": "First line IT-suppport",
+        "summary": "Currently on study leave from work, studying to become a Java programmer.",
+        "location": {
+            "postalCode": "26731",
+            "countryCode": "SE"
+        },
+        "profiles": [
+            {
+                "network": "linkedin",
+                "username": "jek1969",
+                "url": "https:\/\/www.linkedin.com\/in\/jek1969"
+            }
+        ]
+    },
+    "work": [
+        {
+            "company": "Bjuvs kommun\/Klippans kommun",
+            "summary": "First line IT-support in the Bjuv Municipality IT department. As such I've answered the support hotline and replying to support cases via e-mail. My work has been mainly in-office, but occasionally doing work outside of the office.\n\nI've developed a Word-course as well as a host of internal apps for various departments and use, such as an ordering system consisting of four apps, course booking system of two apps and more.\n\nIn May 2018 the IT-departments of four small and neighbouring municipalities merged and my employer changed from Bjuvs kommun to Klippans kommun, together with all the colleagues of the IT-department.",
+            "position": "First line support",
+            "startDate": "2015-06-01"
+        },
+        {
+            "company": "M\u00f6tesbokning",
+            "summary": "Making cold calls to people and small businesses in Sweden, making bookings for meetings with financial advisers.",
+            "position": "Call center agent\/telemarketer",
+            "startDate": "2014-09-01",
+            "endDate": "2015-04-01"
+        },
+        {
+            "company": "Sang Tong Huts",
+            "summary": "At first English teacher for the staff, and then in June of 2012 I moved to the premises to live and work as a full time manager.\n\nThe work encompassed everything a small resort needs: to lead the work with the local staff, check in and take care of guests, bake and cook, do maintenance repairs or make sure it got taken care of, looking after all the dogs living at the resort, and occasionally taking guests on tours.\n\nFurthermore kept the accounts in a big Excel spreadsheet.",
+            "position": "Manager",
+            "startDate": "2012-01-01",
+            "endDate": "2014-07-01"
+        },
+        {
+            "company": "KSDP (Karenni Student Development Programme)",
+            "summary": "Lived next door to and took care of the small family run NGO KSDP.\n\nMade sure all the local projects got their money on time, and kept the accounts.\n\nAlso held two office skills and Microsoft Office training courses for students from the nearby refugee camp and Kayah (longneck) villages.",
+            "position": "Office Manager",
+            "startDate": "2010-12-01",
+            "endDate": "2012-04-01"
+        },
+        {
+            "company": "LICT, Mae Hong Son",
+            "summary": "Basic and advanced Excel course.",
+            "position": "Teacher",
+            "startDate": "2012-03-01",
+            "endDate": "2012-03-01"
+        },
+        {
+            "company": "International Organization for Migration (IOM)",
+            "summary": "English evening course with the local staff at IOM's Mae Hong Son office.",
+            "position": "Teacher",
+            "startDate": "2010-12-01",
+            "endDate": "2011-03-01"
+        },
+        {
+            "company": "The Border Consortium (TBC)",
+            "summary": "English teacher for the local staff of the TBC (formerly TBBC) NGO in Mae Hong Son.",
+            "position": "English teacher",
+            "startDate": "2010-01-01",
+            "endDate": "2011-01-01"
+        },
+        {
+            "company": "Sejfo Auto IT",
+            "summary": "Wrote programs for ABB Industrial robots, mostly in use in the automotive business.",
+            "position": "Robotics Engineer",
+            "startDate": "2008-04-01",
+            "endDate": "2008-10-01"
+        },
+        {
+            "company": "RetailHouse Ltd",
+            "summary": "Event staff\/marketer in supermarkets around V\u00e4ster\u00e5s.",
+            "position": "Event Staff",
+            "startDate": "2005-09-01",
+            "endDate": "2006-02-01"
+        },
+        {
+            "company": "Datorteket",
+            "summary": "Datorteket was a government program for unemployed people, where a big part of my job was to inspire and help clients when looking for a job.",
+            "position": "Instructor",
+            "startDate": "2005-07-01",
+            "endDate": "2005-11-01"
+        },
+        {
+            "company": "Sala municipality, the IT unit",
+            "summary": "Installation of an IP-based phone system.",
+            "position": "IT Consultant",
+            "startDate": "2004-11-01",
+            "endDate": "2004-12-01"
+        },
+        {
+            "company": "V\u00e4ster\u00e5s Stad, B\u00e4ckbyskolan",
+            "summary": "The job was to teach music to seven and nine graders at a big public school in V\u00e4ster\u00e5s, and to be the home teacher for one class.",
+            "position": "Temp teacher",
+            "startDate": "2002-10-01",
+            "endDate": "2004-06-01"
+        },
+        {
+            "company": "Aff\u00e4rsnytta M\u00e4lardalen AB",
+            "summary": "IT-consultant with one assignment at AerotechTelub, Arboga.\n\nProgramming languages used: C and Visual Basic.",
+            "position": "IT Consultant",
+            "startDate": "2001-08-01",
+            "endDate": "2002-07-01"
+        },
+        {
+            "company": "Semcon",
+            "summary": "IT consultant and teacher.\n\nSpecial assignments for Semcon:\n\u2022\tParticipant in the conference JavaPlus, San Jose California, 2000\n\u2022\tParticipant in IACS Conference on \u201cSystems, Man and Cybernetics\u201d in San Diego USA. \n\nDuring my five years as a consultant I had many different assignments, always working in a close relationship with the customer. I also was a teacher in several programming workshops and courses (C and Java) ; I developed the course material myself.\n\nVarious tools and programming languages used: C, Visual Basic, Visual Basic for Applications, Java, HTML, and did some tests in C++.",
+            "position": "IT Consultant",
+            "startDate": "1996-01-01",
+            "endDate": "2001-01-01"
+        },
+        {
+            "company": "PC MEDICAL A\/S",
+            "summary": "I worked as a programmer in the medical sector, working mainly on PC Medical's own archiving and diagnosis tools for x-ray machines and other image producing hospital equipment.\n\nWe worked in C for WIndows.",
+            "position": "Programmer",
+            "startDate": "1995-01-01",
+            "endDate": "1996-01-01"
+        },
+        {
+            "company": "PcSCOPY HB",
+            "summary": "Co-owner and programmer. We developed a system for doctors with private clinics to keep track of all the patient images in procedures like arthroscopy and colonoscopy.\n\nWe worked in Borland Pascal for Windows, using BTrieve as database.",
+            "position": "Programmer",
+            "startDate": "1993-01-01",
+            "endDate": "1995-01-01"
+        },
+        {
+            "company": "SVENSKA DATAINTRESSENTER i Malm\u00f6 AB",
+            "summary": "Software developer, working mainly on Promed, an administrative tool for private doctors, keeping case files, making appointments. We worked on a similar system for dentists, Prodent.\n\nWe worked in Turbo Pascal, MD-DOS, using BTrieve as a relational database.\n\nAs well as being lead programmer, I also helped developing the handbooks and training courses, and oftentimes did the basic training when the system was installed in a private practices.",
+            "position": "Programmer",
+            "startDate": "1989-01-01",
+            "endDate": "1995-01-01"
+        },
+        {
+            "company": "Kv\u00e4llsposten",
+            "summary": "I paid for my driving license by being a paper boy for the newspaper Kv\u00e4llsposten, having my own district, going door to door to sell papers.",
+            "position": "Paper boy",
+            "startDate": "1986-01-01",
+            "endDate": "1987-01-01"
+        }
+    ],
+    "volunteer": [
+        {
+            "organization": "Hope and home, Nepal",
+            "position": "English teacher",
+            "summary": "Living with a Nepali family in a small mountain village outside of Pokhara, I taught English and computers in the little private school the family was running.",
+            "startDate": "2007-03-01",
+            "endDate": "2007-07-01"
+        },
+        {
+            "organization": "DPCA, Sikkim, India",
+            "position": "English teacher",
+            "summary": "I've been to Denjong Pema Choeling Academy, or DPCA twice, the first time in 2007. \n\nI lived in the monastery where the founding monk lives, and was teaching mostly English to the students at the boarding school\/orphanage.\n\nBefore coming back for a second visit in October 2008, I had raised enough money in Sweden arranging a poetry slam evening to be able to buy a cow with a calf so the children could get milk two or three times a week. Second visit was shorter, only three weeks.",
+            "startDate": "2007-08-01",
+            "endDate": "2007-09-01"
+        },
+        {
+            "organization": "Link Hands for Humanity",
+            "position": "Field officer",
+            "summary": "Link Hands for Humanity\u2019s field officer in the area, making payments on their behalf to their local projects.",
+            "startDate": "2010-12-01",
+            "endDate": "2014-09-01"
+        },
+        {
+            "organization": "Huay Pu Keng Kayah (longneck) village, Mae Hong Son",
+            "position": "Instructor",
+            "summary": "Did a biofuel briquette training, teaching how to collect, prepare and press materials to make a firewood replacement briquette.",
+            "startDate": "2012-02-01",
+            "endDate": "2012-02-01"
+        },
+        {
+            "organization": "PaO Women's Union, Mae Hong Son",
+            "position": "Teacher, Instructor",
+            "summary": "In October 2011 I held a successful biomass briquette project with PaO Women\u2019s Union outside Mae Hong Son.\n\nWhen they didn't have any other volunteers, I helped out teaching their members English.",
+            "startDate": "2011-03-01",
+            "endDate": "2013-03-01"
+        },
+        {
+            "organization": "Ban Nai Soi Community Learning Center",
+            "position": "Teacher",
+            "summary": "I volunteered at CLC twice; the first time at the end of my first long trip to Asia, from December 2011 to February 2012.\n\nThe second time I stayed a full semester, from May until October 2009.\n\nI was mostly teaching English, but also some Community Development and Burmese history.",
+            "startDate": "2011-12-01",
+            "endDate": "2012-02-01"
+        },
+        {
+            "organization": "EMFS (Ethnic Migrant Families Society)",
+            "position": "Teacher",
+            "summary": "English and computer teacher.",
+            "startDate": "2009-04-01",
+            "endDate": "2009-08-01"
+        }
+    ],
+    "education": [
+        {
+            "institution": "EC Utbildning",
+            "area": "Computer Programming, Java",
+            "startDate": "2019-01-01",
+            "endDate": "2021-01-01"
+        },
+        {
+            "institution": "Tycho Brahe Skolan, Helsingborg",
+            "startDate": "1985-01-01",
+            "endDate": "1989-01-01"
+        }
+    ],
+    "skills": [
+        {
+            "name": "Microsoft Office"
+        },
+        {
+            "name": "Microsoft Excel"
+        },
+        {
+            "name": "Microsoft Word"
+        },
+        {
+            "name": "TEFL"
+        },
+        {
+            "name": "Adept problem-solver"
+        },
+        {
+            "name": "Blues harmonica player"
+        },
+        {
+            "name": "Management"
+        },
+        {
+            "name": "Customer Service"
+        },
+        {
+            "name": "Consulting"
+        },
+        {
+            "name": "Teamwork"
+        },
+        {
+            "name": "Leadership"
+        },
+        {
+            "name": "Administration"
+        },
+        {
+            "name": "Team Leadership"
+        },
+        {
+            "name": "Public Speaking"
+        },
+        {
+            "name": "ESL"
+        },
+        {
+            "name": "Sun Certified Java Programmer"
+        },
+        {
+            "name": "Visual Basic"
+        },
+        {
+            "name": "VBA"
+        },
+        {
+            "name": "Hospitality"
+        },
+        {
+            "name": "Hospitality Industry"
+        },
+        {
+            "name": "Hotel Management"
+        },
+        {
+            "name": "Resorts"
+        },
+        {
+            "name": "front desk"
+        },
+        {
+            "name": "Powerapps"
+        },
+        {
+            "name": "Office 365"
+        },
+        {
+            "name": "Microsoft PowerApps"
+        },
+        {
+            "name": "Databases"
+        },
+        {
+            "name": "Software Development"
+        },
+        {
+            "name": "Android"
+        },
+        {
+            "name": "Game Development"
+        },
+        {
+            "name": "Mobile Application Development"
+        },
+        {
+            "name": "Mobile Game Development"
+        },
+        {
+            "name": "Technical Support"
+        },
+        {
+            "name": "Java"
+        },
+        {
+            "name": "C#"
+        },
+        {
+            "name": "Software Design"
+        },
+        {
+            "name": "Visual Studio"
+        },
+        {
+            "name": "Language Integrated Query (LINQ)"
+        },
+        {
+            "name": "Microsoft Dynamics"
+        },
+        {
+            "name": "Customer Relationship Management (CRM)"
+        },
+        {
+            "name": "Document Management"
+        }
+    ],
+    "languages": [
+        {
+            "language": "English",
+            "fluency": "Native or bilingual"
+        },
+        {
+            "language": "Swedish",
+            "fluency": "Native or bilingual"
+        },
+        {
+            "language": "Thai",
+            "fluency": "Limited working"
+        }
+    ]
+}

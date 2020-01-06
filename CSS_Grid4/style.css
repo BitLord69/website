@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 30px auto;
+  background-color: white;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.maingrid {
+  gap: 20px;
+  width: 60%;
+  display: grid;
+  min-width: 150px;
+  margin: 5px auto;
+  background-color: white;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: repeat(3, 33%);
+  grid-template-areas:
+    "gr    gr  gr"
+    "yel   rd  bl"
+    "orng orng bl";
+}
+
+.gr {
+  grid-area: gr;
+  background-color: lightgreen;
+}
+
+.yel {
+  gap: 20px;
+  display: grid;
+  grid-area: yel;
+  align-content: center;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "hd"
+    "c";
+  background-color: rgb(252, 252, 147);
+}
+
+.hd {
+  grid-area: hd;
+}
+
+.c {
+  gap: 20px;
+  padding: 0 10px 10px;
+  grid-area: c;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "cc cc"
+    "cc cc";
+}
+
+.cc {
+  grid: cc;
+  width: 50%;
+}
+
+.bcw {
+  background-color: white;
+  padding: 10px 50px 10px 5px;
+}
+
+.rd {
+  gap: 20px;
+  grid-area: rd;
+  display: grid;
+  align-content: center;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "hd"
+    "c";
+  background-color: lightpink;
+}
+
+.bl {
+  grid-area: bl;
+  background-color: lightblue;
+}
+
+.orng {
+  grid-area: orng;
+  background-color: lightsalmon;
+}
+
+@media screen and (max-width: 800px) {
+  .maingrid {
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-areas:
+      "gr    gr"
+      "yel   rd"
+      "bl    bl "
+      "orng orng ";
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .maingrid {
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas:
+      "gr "
+      "yel"
+      "rd"
+      "bl"
+      "orng ";
+  }
+
+  section {
+    padding: 5px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .c {
+    gap: 5px;
+    padding: 0 5px 5px;
+    grid-area: c;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+      "cc"
+      "cc"
+      "cc"
+      "cc";
+  }
+}
+
+h1 {
+  font-size: 1em;
+  margin: 20px 5px 30px;
+}
+
+.yel h1,
+.rd h1 {
+  margin: 20px 5px 0px;
+}
+
+section {
+  padding: 0 10px;
+}

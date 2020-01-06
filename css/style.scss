@@ -1,0 +1,92 @@
+@import '_variables';
+@import '_breakpoints';
+@import '_menu';
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  color: get-color(body);
+  text-align: center;
+  background-color: get-color(primary);
+  font-family: "Righteous", cursive;
+  background: url("/img/Image00001.jpg") no-repeat center right/cover;
+
+  @include breakpoint(medium)
+  {
+    background: url("/img/Image00001.jpg") no-repeat center center/cover;
+  }
+}
+
+.maingrid {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: size(small, hamburger) auto 5vh;
+  grid-template-areas:
+    "hd"
+    "cnt"
+    "ft";
+
+    @include breakpoint(medium)
+    {
+      grid-template-rows: size(medium, hamburger) auto 5vh;
+    } // @include...
+} // .maingrid
+
+.hd {
+  display: flex;
+  grid-area: hd;
+  align-items: center;
+  justify-content: center;
+  height: size(small, hamburger);
+  background: get-color(hamburger);
+
+  @include breakpoint(medium)
+  {
+    height: size(medium, hamburger);
+  }
+
+  article > h1{
+    color: get-color(body);
+    font-weight: lighter;
+    font-size: size(small, hd-h1);
+
+    @include breakpoint(medium)
+    {
+      font-size: size(medium, hd-h1);
+    } // @include...
+  } // article > h1
+} // .hd
+
+.cnt {
+  grid-area: cnt;
+  justify-self: center;
+  height: calc(calc(100vh - #{size(small, hamburger)}) - 5vh);
+
+  @include breakpoint(medium)
+  {
+    height: calc(calc(100vh - #{size(medium, hamburger)}) - 5vh);
+  } // @include...
+} // .cnt
+
+.ft {
+  grid-area: ft;
+  font-style: italic;
+  align-self: center;
+  font-size: size(small, footer);
+
+  @include breakpoint(medium)
+  {
+    font-size: size(medium, footer);
+  } // @include...
+
+  article p {
+    font-weight: lighter;
+  } // article p
+} // .ft
+

@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: auto;
+  background-color: white;
+  font-family: "Times New Roman", Times, serif;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+section {
+  padding: 10px;
+  background-color: lightgray;
+}
+
+.maingrid {
+  gap: 10px;
+  width: 95%;
+  padding: 5px;
+  display: grid;
+  margin: 5px auto;
+  background-color: white;
+  border: 1px solid black;
+  outline: 5px solid white;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: auto auto auto 20%;
+  grid-template-areas:
+    "hd hd hd hd nav"
+    "lc lc rc rc nav"
+    "ft ft ft ft ft";
+}
+
+.hd {
+  height: 100%;
+  grid-area: hd;
+  align-self: center;
+}
+
+.nav {
+  grid-area: nav;
+}
+
+.lc {
+  grid-area: lc;
+}
+
+.rc {
+  grid-area: rc;
+}
+
+.ft {
+  height: 100%;
+  grid-area: ft;
+  font-size: 80%;
+  font-style: italic;
+  align-self: center;
+}
+
+@media screen and (max-width: 860px) {
+  .maingrid {
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: auto auto;
+    grid-template-areas:
+      "hd hd"
+      "lc rc"
+      "nav nav"
+      "ft ft";
+  }
+
+  section {
+    padding: 8px;
+    background-color: lightyellow;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .maingrid {
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-columns: auto;
+    grid-template-areas:
+      "hd"
+      "lc"
+      "rc"
+      "nav"
+      "ft";
+  }
+
+  section {
+    padding: 5px;
+    background-color: lightseagreen;
+  }
+}

@@ -1,0 +1,61 @@
+$small-sizes: (
+  hd-h1: 1rem,
+  footer: 70%,
+  hamburger: 35px,
+  hamburger-padding: 0.4rem,
+  sub-font: 0.75rem,
+  main-font: 1rem,
+  menu-top: 35px,
+  menu-width: 60vw,
+  menu-height: 70vh,
+  menu-line-height: 1.2rem,
+  submenu-line-height:0.8rem,
+  border-radius: 3px
+);
+
+$medium-sizes: (
+  hd-h1: 1.5rem,
+  footer: 60%,
+  hamburger: 50px,
+  hamburger-padding: 0.8rem,
+  sub-font: 0.85rem,
+  main-font: 1.75rem,
+  menu-top: 8vh,
+  menu-width: 40vw,
+  menu-height: 30vh,
+  menu-line-height: 2rem,
+  submenu-line-height:1.2rem,
+  border-radius: 4px
+);
+
+@function size($bp, $size){
+  $sz: 0;
+
+  @if $bp == small
+  {
+    $sz: map-get($small-sizes, $size);
+  }
+  @else if $bp == medium
+  {
+    $sz: map-get($medium-sizes, $size);
+  } 
+  @else {
+    @warn #{$bp} + " is not a valid breakpoint!";
+  }
+
+  @return $sz;
+} // function size
+
+$menu-speed: 0.4s;
+
+$colors: (
+  body: white,
+  menu: rgba(24,39,51,1),
+  primary: rgba(13, 110, 139, 0.65),
+  hamburger: rgba(13, 110, 139, 0.65),
+  hamburger-opaque: rgba(13, 110, 139, 0)
+);
+  
+@function get-color($color){
+  @return map-get($colors, $color);
+} // function color

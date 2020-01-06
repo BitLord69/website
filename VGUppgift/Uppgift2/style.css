@@ -1,0 +1,60 @@
+body {
+  color: teal;
+  font-size: 80%;
+  box-sizing: border-box;
+  background: whitesmoke;
+
+  height: 100vh;
+  min-height: 100vh;
+
+  grid-gap: 0;
+  display: grid;
+  grid-template-columns: 150px auto;
+  grid-template-rows: 70px auto 25px;
+  grid-template-areas:
+    " hd    hd"
+    " nav content"
+    " ft    ft";
+
+  overflow-y: hidden;
+}
+
+.hd {
+  grid-area: hd;
+  text-align: center;
+  background: lightcoral;
+}
+
+.nav {
+  grid-area: nav;
+  background: lime;
+}
+
+.content {
+  width: 100%;
+  padding: 0 10px;
+  overflow-y: scroll;
+  grid-area: content;
+}
+
+.ft {
+  width: 100%;
+  display: grid;
+  grid-area: ft;
+  text-align: center;
+  align-items: center;
+  background: lightskyblue;
+}
+
+.active {
+  color: yellow;
+}
+
+li > a {
+  color: inherit;
+}
+
+hr {
+  margin: 5px 30px;
+  border-color: green;
+}

@@ -1,0 +1,322 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+  font-size: 70%;
+  align-items: center;
+  font-family: "Righteous", cursive;
+}
+
+i {
+  margin: 4px;
+}
+
+button {
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  font-size: 170%;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.expander {
+  font-size: 90%;
+}
+
+.maincolumns {
+  margin: auto;
+  justify-content: stretch;
+  background-image: linear-gradient(
+    to right top,
+    rgb(153, 181, 233),
+    rgb(0, 17, 255),
+    purple
+  );
+}
+
+.mainpart {
+  min-width: 15vw;
+  min-height: 40vh;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.columns,
+.mainpart {
+  display: flex;
+  flex-direction: column;
+}
+
+.columncontainer {
+  min-width: 12vw;
+  width: 100%;
+  padding: 1px 4px;
+  justify-content: space-between;
+  /* border: 1px solid greenyellow; */
+}
+
+.flexed,
+.columncontainer {
+  display: flex;
+  align-items: center;
+}
+
+.headerContainer {
+  margin: auto;
+  display: flex;
+  min-width: 12vw;
+  padding: 5px 4px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.playlistimage {
+  padding: 2px;
+  width: 2.5vw;
+  height: 2.5vw;
+  min-width: 1vw;
+  min-height: 1vw;
+}
+
+.playedimagecontainer {
+  min-width: 10vw;
+  min-height: 10vh;
+  width: 90%;
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-image: url(https://www.musicnotes.com/now/wp-content/uploads/the-miracle-queen.jpg);
+}
+
+.meter {
+  width: 100%;
+  height: 20px;
+  padding: 7px;
+  border-radius: 1vw;
+  /* border: 1px solid green; */
+}
+
+#songTemplate {
+  display: none;
+}
+
+input[type="range"] {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 0.5vw;
+  background-color: whitesmoke;
+  border: 1px 0 1px 1px solid yellow;
+
+  -webkit-appearance: none;
+
+  -webkit-border-radius: 0.5vw;
+  -moz-border-radius: 0.5vw;
+}
+
+input::-webkit-slider-thumb {
+  width: 0.95vw;
+  height: 0.95vw;
+  -webkit-appearance: none;
+
+  border-radius: 1vw white;
+  -webkit-border-radius: 1vw;
+  background-image: linear-gradient(
+    to right top,
+    rgb(255, 255, 255),
+    rgb(55, 137, 243),
+    rgb(233, 0, 221)
+  );
+}
+
+.buttoncontainer {
+  flex: 1;
+  display: flex;
+  padding: 3px 10px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.songinfocontainer {
+  min-width: 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.playlistpart {
+  color: lightgray;
+  justify-content: start;
+  align-items: flex-start;
+}
+
+.smalltext {
+  font-size: 75%;
+  min-width: 5%;
+  overflow: hidden;
+  color: lightgray;
+  text-overflow: ellipsis;
+  text-align: left;
+}
+
+.hovercontainer {
+  border-radius: 0.5vw;
+}
+
+.hovercontainer:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.hovercontainer:hover * {
+  color: yellow;
+  transition: background-color 0.5s;
+}
+
+.currentlyPlaying {
+  color: lightsteelblue;
+  background-image: linear-gradient(
+    to right top,
+    purple,
+    rgba(153, 181, 233, 0.5),
+    rgba(0, 17, 255, 0.5)
+  );
+}
+
+#startSong,
+#stopSong {
+  font-size: 270%;
+}
+
+#prevSong,
+#nextSong {
+  font-size: 160%;
+}
+
+section
+  :not(.columncontainer):not(.imagecontainer):not(.buttoncontainer):not(.playlistpart):not(.headerTitle):not(.wide) {
+  flex: 1;
+  text-align: center;
+}
+
+.wide {
+  flex: 7;
+  width: 100%;
+}
+
+.playlistitem {
+  text-align: center;
+}
+
+.headerTitle {
+  flex: 20;
+}
+
+/* The dialog (background) */
+.dialog {
+  position: fixed;
+  z-index: 1;
+  border-radius: 1vw;
+  left: 0;
+  top: 0;
+  --Width: 25vw;
+  --Height: 8vw;
+  overflow: auto;
+  width: var(--Width);
+  height: var(--Height);
+  min-width: 10vw;
+  min-height: 170px;
+  border: 1px solid black;
+  margin-left: calc(calc(100% - var(--Width)) / 2);
+  margin-top: calc(calc(100vw - var(--Height)) / 8);
+  background-image: linear-gradient(
+    to right top,
+    purple,
+    rgba(153, 181, 233, 0.9),
+    rgba(0, 17, 255, 0.9)
+  );
+}
+
+.confirmDlg,
+.addSongDlg {
+  display: none;
+}
+
+/* dialog Content/Box */
+.dialog-content {
+  width: 95%;
+  padding: 10px;
+  color: black;
+  margin: 15px auto;
+  font-size: 120%;
+  border-radius: 1vw;
+  text-align: center;
+  border: 1px solid #888;
+  background-color: #fefefe;
+}
+
+.addSongDlg {
+  padding: 5px;
+  --Width: 30vw;
+  color: White;
+  font-size: 120%;
+  min-height: 270px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+}
+
+.myForm {
+  width: 100%;
+  margin-top: 5%;
+  padding: 0 10px;
+  /* border: 1px solid green; */
+}
+
+.myForm p,
+.myForm input[type="text"],
+.myForm input[type="url"] {
+  padding: 0 5px;
+  margin: 2px 0;
+  width: 100%;
+  border-radius: 0.5vw;
+}
+
+.myForm input[type="submit"] {
+  margin-left: 47%;
+  align-self: center;
+  text-align: center;
+}
+
+.dialogOK {
+  margin-left: 47%;
+}
+
+/* The close Button */
+.dialogCancel {
+  float: right;
+  line-height: 16px;
+}
+
+.dialogOK,
+.dialogCancel {
+  padding: 1px;
+  font-size: 28px;
+  font-weight: bold;
+  color: whitesmoke;
+}
+
+.dialogCancel:hover,
+.dialogCancel:focus,
+.dialogOK:hover,
+.dialogOK:focus {
+  color: darkgray;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid lightgray;
+  border-radius: 0.75vw;
+  transition: color 0.3s;
+}

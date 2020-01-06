@@ -1,0 +1,7 @@
+Javascript används endast för att sätta datumväljarnas standarddatum: dagens datum i check in, och morgondagens datum i check out.
+
+För att få rubriken att ändra storlek används en proportionell fontstorlek och dessutom två media-queries, eftersom det ser ut som om rubriken hoppar i storlek vid ett par tillfällen.
+
+För att få bakgrundbilden att bete sig som i videon sätts den med positionen center right och stoleken sätts att ta upp hela ytan med cover. Höjden sätts till 40% av tillgänglig höjd för webbläsaren (40vh).
+
+Responsiviteten implementeras genom att använda Bootstraps klasser för detta, och sätts så att check in & -ut datumväljarna på små skärmar tar upp var sin rad, men på enheter större än medium blir det två kolumner istället.

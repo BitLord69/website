@@ -1,0 +1,194 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: white;
+  min-height: 100vh;
+  background: linear-gradient(to top right, rgb(119, 203, 241), purple);
+}
+
+.main {
+  display: flex;
+  min-height: 100%;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-form * {
+  border: 0;
+  outline: none;
+}
+
+.login-form section {
+  margin: 10px 0;
+  position: relative;
+}
+
+.login-form input,
+.login-form textarea,
+.login-form select,
+.login-form button,
+.information button {
+  color: white;
+  font-size: 90%;
+  margin-bottom: 10px;
+  background-color: transparent;
+}
+
+.login-form ::placeholder {
+  color: lightgray;
+}
+
+.login-form select,
+.login-form input {
+  border-bottom: 1px solid white;
+}
+
+.selectLabel {
+  font-size: 70%;
+  display: block;
+  opacity: 0.9;
+}
+
+.login-form select {
+  padding: 2px 0;
+}
+
+.login-form select:hover {
+  color: black;
+  background-color: transparent;
+}
+
+.login-form select:active {
+  color: black;
+  background-color: transparent;
+}
+
+.login-form select option {
+  padding: 12px 0px 10px 24px;
+  box-shadow: 32px -25px 50px -40px black inset;
+}
+
+.login-form select optgroup {
+  padding: 15px 10px 7px 0px;
+  text-align: center;
+  text-shadow: 1px 3px 5px black;
+  font-weight: bold;
+  color: green;
+}
+
+.login-form input[required]:valid:focus {
+  border-bottom: 1px solid limegreen;
+}
+
+.login-form input[required]:invalid:focus {
+  border-bottom: 1px solid red;
+}
+
+.login-form button,
+.information button {
+  font-size: 120%;
+  border: 1px solid lightsteelblue;
+}
+
+.login-form button:hover,
+.information button:hover {
+  border: 2px solid lightsteelblue;
+  cursor: pointer;
+  transition: border ease 0.2s;
+}
+
+.login-form > section > input[type="text"] + label,
+.login-form > section > textarea + label {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  cursor: text;
+  opacity: 0.75;
+  transition: top ease 0.2s, font-size 0.2s;
+}
+
+.login-form input:placeholder-shown,
+.login-form textarea:placeholder-shown {
+  user-select: none;
+}
+
+.login-form input[type="text"]:focus + label,
+.login-form input[type="text"]:not(:placeholder-shown) + label,
+.login-form textarea:focus + label,
+.login-form textarea:not(:placeholder-shown) + label {
+  top: -14px;
+  opacity: 0.9;
+  font-size: 70%;
+}
+
+.login-form textarea {
+  width: 100%;
+  min-height: 10vh;
+  margin-bottom: 0;
+  border: 1px solid lightsteelblue;
+}
+
+.login-form input[type="radio"] + label,
+.login-form input[type="checkbox"] + label {
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.login-form input[type="radio"],
+.login-form input[type="checkbox"] {
+  margin: 0px;
+  vertical-align: middle;
+}
+
+.red {
+  color: red;
+}
+
+.blue {
+  color: blue;
+}
+
+.green {
+  color: lightgreen;
+}
+
+.login-form fieldset {
+  width: 60%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid lightsteelblue;
+}
+
+.login-form fieldset:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transition: background-color ease 0.5s;
+}
+
+.last {
+  margin-bottom: 20px;
+}
+
+.login-form legend {
+  padding: 0 2px;
+}
+
+input[type="radio"] + label:after {
+  content: "\A";
+  white-space: pre;
+  margin-bottom: 10px;
+}
+
+#template {
+  display: none;
+}
+
+.information hr {
+  margin: 15px;
+}
