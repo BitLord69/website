@@ -12,14 +12,7 @@
     cursor: pointer;
     position: absolute;
 
-    width: size(small, hamburger);
-    height: size(small, hamburger);
-
-    @include breakpoint(medium)
-    {
-      width: size(medium, hamburger);
-      height: size(medium, hamburger);
-    } // @include...
+    @include generate_mqs((width, hamburger), (height, hamburger));
   } // .toggler
 
   .toggler:checked + .hamburger > div{
@@ -38,15 +31,15 @@
 
   .toggler:checked ~ .menu {
     transform: scale(1);
-    // visibility: visible;
 
-    left: 0;
-    top: size(small, menu-top);
+    @include generate_mqs(
+      (top, menu-top), 
+      (left, func menu-width calc(calc(100vw - menu-width) / 2)));
 
-    @include breakpoint(medium)
+    // Over-ride the left side if on a small device
+    @include breakpoint(small)
     {
-      top: size(medium, menu-top);
-      left: calc(calc(100vw - #{size(medium, menu-width)}) / 2);
+      left: 0;
     } // @include...
   } // .toggler:checked
 
@@ -64,16 +57,7 @@
     align-items: center;
     justify-content: center;
 
-    width: size(small, hamburger);
-    height: size(small, hamburger);
-    padding: size(small, hamburger-padding);
-
-    @include breakpoint(medium)
-    {
-      width: size(medium, hamburger);
-      height: size(medium, hamburger);
-      padding: size(medium, hamburger-padding);
-    } // @include...
+    @include generate_mqs((width, hamburger), (height, hamburger), (padding, hamburger-padding));
 
     div {
       width: 100%;
@@ -103,32 +87,21 @@
 } // .menu_wrap
 
 .menu {
-  // display: flex;
   position: absolute;
   color: get-color(primary);
-  
-  width: size(small, menu-width);
-  font-size: size(small, main-font);
-  border-radius: size(small, border-radius);
   
   background: get-color(primary);
   box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.45);
  
-    // Properties for animating when showing the menu
   top: 0;
-  // visibility: hidden;
   transform: scale(0);
   transition: all $menu-speed ease;
 
-  left: -1 * size(small, menu-width);
-
-  @include breakpoint(medium)
-  {
-    left: -1 * size(medium, menu-width);
-    width: size(medium, menu-width);
-    font-size: size(medium, main-font);
-    border-radius: size(medium, border-radius);
-  }
+  @include generate_mqs(
+    (left, func menu-width calc(-1 * menu-width)),
+    (width, menu-width), 
+    (font-size, main-font), 
+    (border-radius, border-radius));
 
   ul {
     display: flex;
@@ -160,22 +133,14 @@
 
       a {
         text-decoration: none;
-        padding: 0.5rem 1.2rem;
-        line-height: size(small, menu-line-height);
+        padding: 0.5rem 1rem;
 
-        @include breakpoint(medium)
-        {
-          line-height: size(medium, menu-line-height);
-        }
+        @include generate_mqs((line-height, menu-line-height));
 
         &:hover {
-          border-radius: size(small, border-radius);
+          // opacity: 50%;
           background: darken(get-color(primary), 5%);
-
-          @include breakpoint(medium)
-          {
-            border-radius: size(medium, border-radius);
-          }
+          @include generate_mqs((border-radius, border-radius));
         } // &:hover
 
         &:link,
@@ -188,10 +153,6 @@
         }
       } // a
     } // li
-
-    // .menu>ul>li:first-child a{
-    //   width:270px;
-    // }
   } // ul
 
   .submenu {
@@ -199,15 +160,13 @@
     
     list-style: none;
     margin: 0 0.2rem;
-    font-size: size(small, sub-font);
-    line-height: size(small, submenu-line-height);
-    
+
+    @include generate_mqs((font-size, sub-font), (line-height, submenu-line-height));
+
     display: flex;
     @include breakpoint(medium)
     {
       display: none; // display gets set to 'flex' in the main li:hover
-      font-size: size(medium, sub-font);
-      line-height: size(medium, submenu-line-height);
     }
 
     li {
@@ -216,20 +175,15 @@
       text-align: left;
       @include breakpoint(medium)
       {
-        margin: 0.5rem 0.2rem;
+        margin: 0.3rem 0.2rem;
         text-align: center;
       }
 
       a {
-        padding: 0.5rem 1rem;
+        padding: 0.3rem 1rem;
         text-decoration: none;
 
-        line-height: size(small, submenu-line-height);
-
-        @include breakpoint(medium)
-        {
-          line-height: size(medium, submenu-line-height);
-        }
+        @include generate_mqs((medium, submenu-line-height));
 
         &:hover {
           color: lighten(get-color(menu), 50%);

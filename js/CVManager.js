@@ -12,7 +12,8 @@ class CVManager {
     let str =
       this.cv == undefined
         ? "CV not loaded yet - please try again in a short while!"
-        : this.cv.render();
+        : `Work in progress - Här kommer inom kort att komma en niftig CV!<br>` +
+          this.cv.render();
     $(".cnt").html(str);
   } // render
 } // class CVManager

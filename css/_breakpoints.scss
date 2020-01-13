@@ -1,31 +1,66 @@
 @mixin breakpoint($breakpoint) {
-  @if $breakpoint == "small" {
+  @if $breakpoint == small {
     @media (max-width: 599px) {
       @content;
     }
   }
 
-  @else if $breakpoint == "medium" {
+  @else if $breakpoint == medium {
     @media (min-width: 600px) {
       @content;
     }
   }
 
-  @else if $breakpoint == "large" {
+  @else if $breakpoint == large {
     @media (min-width: 900px) {
       @content;
     }
   }
 
-  @else if $breakpoint == "xlarge" {
+  @else if $breakpoint == xlarge {
     @media (min-width: 1200px) {
       @content;
     }
   }
 
-  @else if $breakpoint == "xxlarge" {
-  @media (min-width: 1800px) {
-    @content;
+  @else if $breakpoint == xxlarge {
+    @media (min-width: 1800px) {
+      @content;
+    }
   }
-}
 } // @mixin breakpoint
+
+@mixin write-attributes($map, $args)
+{
+  @each $attrib, $value in $args {
+    @if length($value) > 1 {
+      @if nth($value, 1)  == func {
+          $replace_val: map-get($map, nth($value, 2));
+          #{$attrib}: str-replace(nth($value, 3), nth($value, 2), $replace_val);
+        }
+        @else
+        {
+          #{$attrib}: map-get($map, nth($value, 1)) nth($value, 2) nth($value, 3);
+        }
+    } // if length..
+    @else
+    {
+      #{$attrib}: map-get($map, $value);
+    } // @else
+  } // @each @attrib...
+} // mixin write-attributes
+
+@mixin generate_mqs($args...) {
+  @each $key, $map in $super-sizes {
+    @if ($key == small)
+    {
+        @include write-attributes($map, $args);
+    } // if $key...
+    @else {
+      @include breakpoint($key) 
+      {
+        @include write-attributes($map, $args);
+      } // @include...
+    } // @else
+  } // @each @key, @map...
+} // mixin generate_bps

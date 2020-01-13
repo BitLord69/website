@@ -5,7 +5,8 @@ class App {
     this.routes = {
       "": new StartPage(),
       page404: new Page404(),
-      cv: new CVManager()
+      cv: new CVManager(),
+      panorama: new Panorama()
     };
 
     // Hide the menu
@@ -20,7 +21,7 @@ class App {
     });
 
     // Listen for clicks on collapsable menu items, hide the menu and restore the hamburger
-    $("body").on("click", ".collapse", e => {
+    $("body").on("click", ".collapse-menu", e => {
       $(".menu").hide();
       $(".toggler").trigger("click");
     });
@@ -36,11 +37,6 @@ class App {
     // Look up the "page to show" - the instance to call render on
     // if we do not find any page set the page to 'page404'
     let pageToShow = this.routes[hash] || this.routes.page404;
-
-    // Hide the menu if it's open
-    // if ($(".menu").css("visibility") == "visible") {
-    //   $(".menu").css("visibility", "hidden");
-    // }
 
     // Render content
     pageToShow.render();

@@ -1,52 +1,52 @@
-$small-sizes: (
-  hd-h1: 1rem,
-  footer: 70%,
-  hamburger: 35px,
-  hamburger-padding: 0.4rem,
-  sub-font: 0.75rem,
-  main-font: 1rem,
-  menu-top: 35px,
-  menu-width: 60vw,
-  menu-height: 70vh,
-  menu-line-height: 1.2rem,
-  submenu-line-height:0.8rem,
-  border-radius: 3px
+$menu-speed: 0.45s;
+
+$super-sizes: (
+  small:
+    (
+      hd-h1: 1rem,
+      footer: 70%,
+      hamburger: 35px,
+      hamburger-padding: 0.4rem,
+      sub-font: 0.75rem,
+      main-font: 1rem,
+      menu-top: 35px,
+      menu-width: 205px,
+      menu-height: 70vh,
+      menu-line-height: 1.2rem,
+      submenu-line-height:0.8rem,
+      border-radius: 3px
+    ),
+    medium: 
+    (
+      hd-h1: 1.5rem,
+      footer: 60%,
+      hamburger: 50px,
+      hamburger-padding: 0.8rem,
+      sub-font: 0.85rem,
+      main-font: 1.4rem,
+      menu-top: 150px,
+      menu-width: 540px,
+      menu-height: 30vh,
+      menu-line-height: 2rem,
+      submenu-line-height:1.2rem,
+      border-radius: 4px
+    ),
+    large:
+    (
+      hd-h1: 1.5rem,
+      footer: 60%,
+      hamburger: 60px,
+      hamburger-padding: 0.8rem,
+      sub-font: 0.85rem,
+      main-font: 1.75rem,
+      menu-top: 150px,
+      menu-width: 630px,
+      menu-height: 30vh,
+      menu-line-height: 2rem,
+      submenu-line-height:1.2rem,
+      border-radius: 4px
+    )
 );
-
-$medium-sizes: (
-  hd-h1: 1.5rem,
-  footer: 60%,
-  hamburger: 50px,
-  hamburger-padding: 0.8rem,
-  sub-font: 0.85rem,
-  main-font: 1.75rem,
-  menu-top: 8vh,
-  menu-width: 50vw,
-  menu-height: 30vh,
-  menu-line-height: 2rem,
-  submenu-line-height:1.2rem,
-  border-radius: 4px
-);
-
-@function size($bp, $size){
-  $sz: 0;
-
-  @if $bp == small
-  {
-    $sz: map-get($small-sizes, $size);
-  }
-  @else if $bp == medium
-  {
-    $sz: map-get($medium-sizes, $size);
-  } 
-  @else {
-    @warn #{$bp} + " is not a valid breakpoint!";
-  }
-
-  @return $sz;
-} // function size
-
-$menu-speed: 0.4s;
 
 $colors: (
   body: white,
